@@ -1,0 +1,80 @@
+@use 'variables';
+
+.hero {
+    padding-top: 64px;
+    padding-bottom: 100px;
+    background-image: url(../images/biblioteca.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+
+    .container {
+        position: relative;
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: variables.$color_coral;
+        content: '';
+        opacity: .9;
+    }
+
+    // h2
+    &__date_location {
+        margin-top: 64px;
+        font-size: 24px;
+        font-weight: 800;
+        font-style: italic;
+        text-align: center;
+    }
+    
+    // h1
+    &__call {
+        margin-top: 8px;
+        font-size: 48px;
+        font-weight: 800;
+        text-align: center;
+    }
+
+    // p
+    &__text {
+        margin-top: 8px;
+        font-size: 18px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    // h2
+    &__date_counter {
+        font-size: 24px;
+        font-weight: 800;
+        text-align: center;
+    }
+
+
+    // button
+    &__button {
+        margin-top: 32px;
+        padding: 12px;
+        font-size: 18px;
+        font-weight: 800;
+        text-align: center;
+        background-color: variables.$color_persian_green;
+        color: variables.$color_white;
+        border-radius: 8px;
+        outline: none;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            background-color: lighten(variables.$color_persian_green, 2);
+            transition: background-color ease .5s;
+        }
+    }
+
+}

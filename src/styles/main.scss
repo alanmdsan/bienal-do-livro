@@ -1,0 +1,39 @@
+@use 'variables';
+@use 'hero';
+@use 'attractions';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Merriweather', serif;
+    list-style: none;
+}
+
+body {
+    background-color: variables.$color_burnt_sienna;
+    color: variables.$color_jet;
+}
+
+.present {
+    padding: 8px;
+    background-color: variables.$color_persian_green;
+    color: variables.$color_white;
+    font-size: 12px;
+    font-weight: 800;
+    text-align: center;
+}
+
+.container {
+    max-width: 960px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media (max-width: 1024px) {
+        max-width: 90%;
+    }
+
+    @media (max-width: 640px) {
+        max-width: 80%;
+    }
+}
